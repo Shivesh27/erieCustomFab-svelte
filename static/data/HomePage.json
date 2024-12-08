@@ -1,0 +1,20 @@
+{
+    "services": [
+        {
+            "cardTitle": "Welding",
+            "cardDesc": "kjbasdfjkbhasdf  asdf"
+        },
+        {
+            "cardTitle": "Forming",
+            "cardDesc": " asdf asdf asd"
+        },
+        {
+            "cardTitle": "Rolling",
+            "cardDesc": " asdf asdf asd"
+        },
+        {
+            "cardTitle": "Painting",
+            "cardDesc": " asdfasdf asf "
+        }
+    ]
+}
