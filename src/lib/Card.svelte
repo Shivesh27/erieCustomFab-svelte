@@ -1,52 +1,71 @@
-<script lang="ts">
-    let {
-        cardTitle,
-        cardDesc
-    } = $props()
+<script>
+	let { imgsrc, cardTitle, cardDesc } = $props();
 </script>
 
 <div class="card">
-    <div class="card-icon"><img src="images/s1.svg" alt="" /></div>
-    <div class="card-title">{cardTitle}</div>
-    <div class="card-desc">{cardDesc}</div>
+	<div class="card-icon"><img src="{imgsrc}" alt="" /></div>
+	<div class="card-content">
+		<div class="card-title">{cardTitle}</div>
+		<div class="card-desc">
+			{cardDesc}
+		</div>
+	</div>
 </div>
 
 <style>
- .card {
-    margin: 20px 20px;
-    padding: 16px 16px;
-    max-width: 360px;
-    height: auto;
-    /* border: 1px solid black; */
-}
+	.cards-container {
+		display: flex;
+		flex-direction: column;
+		margin-top: 20px;
+	}
 
-.card-icon {
-    width: 80px;
-    height: 80px;
-    padding: 20px;
-    /* border: 1px solid black; */
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 8px #fafafa;
-}
+	.card {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 20px;
+		border-radius: 10px;
+		overflow: hidden;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adding a shadow effect */
+	}
 
-.card-icon img {
-    /* border: 1px solid black; */
-    max-width: 100%;
-    height: auto;
-}
+	.card-icon {
+		flex: 0 0 40%; /* Adjust the percentage value as needed */
+	}
 
-.card-title {
-    width: 100%;
-    margin-top: 20px;
-    font-size: 22px;
-    font-weight: bold;
-}
+	.card-icon img {
+		width: 100%; /* Ensuring the image fills its container */
+		height: 100%; /* Ensuring the image fills its container */
+		border-top-left-radius: 10px; /* Rounded corners for the top-left and bottom-left corners */
+		border-bottom-left-radius: 10px;
+		object-fit: cover;
+	}
 
-.card-desc {
-    width: 100%;
-    margin-top: 20px;
-    margin-right: 20px;
-    font-size: 16px;
-}
+	.card-content {
+		flex: 1; /* Allowing the content container to grow and fill the remaining space */
+		padding: 20px; /* Adding padding inside the content container */
+	}
 
+	.card-title {
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+
+	.card-desc {
+		font-size: 14px;
+		color: #666;
+	}
+	@media all and (min-width: 468px) {
+		.card {
+			flex-direction: row;
+		}
+	}
+
+	/* desktop menu */
+
+	@media all and (min-width: 768px) {
+		.card {
+			flex-direction: row;
+		}
+	}
 </style>

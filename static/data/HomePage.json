@@ -1,20 +1,28 @@
 {
     "services": [
         {
+            "cardIcon": "images/work.png",
             "cardTitle": "Welding",
             "cardDesc": "kjbasdfjkbhasdf  asdf"
         },
         {
+            "cardIcon": "images/metal-forming.png",
             "cardTitle": "Forming",
             "cardDesc": " asdf asdf asd"
         },
         {
-            "cardTitle": "Rolling",
+            "cardIcon": "images/milling-machine.png",
+            "cardTitle": "Machining",
             "cardDesc": " asdf asdf asd"
         },
         {
+            "cardIcon": "images/car-painting.png",
             "cardTitle": "Painting",
             "cardDesc": " asdfasdf asf "
         }
-    ]
+    ],
+    "servicesTitle": "You've Entered the Right Place for All Your Custom Fab Needs!",
+    "aboutTitle": "About us",
+    "aboutContentLine1": "Founded in 2020 in Leamington, Ontario, Erie Custom Fab Inc was created to support the vital greenhouse and automobile industries that are at the heart of our community. With a commitment to craftsmanship and innovation, we specialize in custom fabrication, offering precision solutions for a diverse range of sectors, from agriculture to automotive and beyond.",
+    "aboutContentLine2": "At Erie Custom Fab Inc, we believe that \"You think, we make it.\""
 }

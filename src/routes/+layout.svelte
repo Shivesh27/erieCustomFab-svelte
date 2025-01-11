@@ -1,12 +1,13 @@
 <script>
     import Footer from "$lib/Footer.svelte";
+	import NewFooter from "$lib/NewFooter.svelte";
 </script>
 
 <main class="container">
     <slot/>
 </main>
 
-<Footer/>
+<NewFooter/>
 
 <style>
     :global(body) {

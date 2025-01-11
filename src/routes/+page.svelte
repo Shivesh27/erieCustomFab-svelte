@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Card from '$lib/Card.svelte';
+	import IconCard from '$lib/IconCard.svelte';
 	import HeroBox from '$lib/HeroBox.svelte';
 	import Navbar from '$lib/Navbar.svelte';
 	import { onMount } from 'svelte';
@@ -9,7 +9,7 @@
 	onMount(() => {
 		fetch('/data/HomePage.json')
 			.then((response) => response.json())
-			.then((data) => (homepageData = data));
+			.then((data) => (homepageData = data))
 	});
 </script>
 
@@ -20,18 +20,18 @@
 
 <div class="services-container">
 	<div class="services-heading">
-		<div class="services-title">Custom fabrication</div>
-		<div class="services-subtitle">Expert welding services for all your needs</div>
+		<div class="services-title">You've Entered the Right Place for All Your Custom Fab Needs!</div>
+		<div class="services-subtitle">Welcome to ECF, where precision meets innovation in custom metal fabrication! We specialize in transforming your ideas into high-quality, durable metal products with expert craftsmanship. Whether you're looking for custom designs, prototypes, or large-scale projects, our team is committed to delivering excellence and reliability every step of the way. Thank you for choosing us<br><span style="font-style: italic;">You think it We make it.</span></div>
 	</div>
 	<div class="cards-container">
 		{#if homepageData}
 			{#each homepageData.services as service}
-				<Card cardTitle={service.cardTitle} cardDesc={service.cardDesc} />
+				<IconCard cardTitle={service.cardTitle} cardIcon={service.cardIcon}/>
 			{/each}
 		{:else}
 			<p>Loading...</p>
 		{/if}
-	</div>
+	</div> 
 </div>
 
 <div class="about-container">
@@ -40,46 +40,65 @@
     </div>
 
     <div class="about-content">
-      <div class="about-title">About us</div>
-      <div class="about-desc">
-        Founded in 2020 in Leamington, Ontario, Erie Custom Fab Inc was
-        created to support the vital greenhouse and automobile industries that
-        are at the heart of our community. With a commitment to craftsmanship
-        and innovation, we specialize in custom fabrication, offering
-        precision solutions for a diverse range of sectors, from agriculture
-        to automotive and beyond.
-        <br />
-        <br />
-        At Erie Custom Fab Inc, we believe that "You think, we make it."
-        <br />
-        <br />
-        <!-- Whether it's designing custom parts for greenhouses or providing intricate components for automotive manufacturing, we work closely with our clients to bring their ideas to life. Our team is dedicated to ensuring every project meets the highest standards of quality, performance, and durability, tailored to the unique needs of each industry.
-            Starting in Leamington, we've built our reputation by understanding the specific challenges of local industries and providing solutions that make a difference. 
-            <br>
-            <br>             
-            From prototyping and small-scale runs to large-scale production, we offer flexibility, reliability, and top-tier craftsmanship in every project.
-            When you work with Erie Custom Fab Inc, you're not just getting a fabricator—you're getting a dedicated partner who understands the importance of your vision. You think it, we make it. Let’s create something great together. -->
-      </div>
-      <div class="about-cta"><a href="about.html">Read More</a></div>
+        {#if homepageData}
+        <div class="about-title">{homepageData.aboutTitle}</div>
+        <div class="about-desc">
+          {homepageData.aboutContentLine1}
+          <br />
+          <br />
+          {homepageData.aboutContentLine2}
+          <br />
+          <br />
+          <!-- Whether it's designing custom parts for greenhouses or providing intricate components for automotive manufacturing, we work closely with our clients to bring their ideas to life. Our team is dedicated to ensuring every project meets the highest standards of quality, performance, and durability, tailored to the unique needs of each industry.
+              Starting in Leamington, we've built our reputation by understanding the specific challenges of local industries and providing solutions that make a difference. 
+              <br>
+              <br>             
+              From prototyping and small-scale runs to large-scale production, we offer flexibility, reliability, and top-tier craftsmanship in every project.
+              When you work with Erie Custom Fab Inc, you're not just getting a fabricator—you're getting a dedicated partner who understands the importance of your vision. You think it, we make it. Let’s create something great together. -->
+        </div>
+        {/if}
+      
     </div>
   </div>
 
 <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    :global(body) {
+        font-family: "Montserrat", sans-serif;
+    }
+    :global(*) {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .services-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
 	.services-heading {
 		margin-top: 20px;
-		padding: 8px 8px;
+		padding: 30px;
 		align-items: center;
 		text-align: center;
+        width: 60%;
+        border-radius: 5px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 	}
 
 	.services-title {
 		font-size: 30px;
-		font-weight: bold;
+		font-weight: 500;
+        padding-bottom: 40px;
 	}
 
 	.services-subtitle {
 		margin-top: 8px;
-		font-size: 14px;
+		font-size: 16px;
 		font-weight: 300;
 	}
 
@@ -89,6 +108,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 120px;
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 50px;
@@ -137,16 +157,7 @@
 }
 
 	@media all and (min-width: 468px) {
-		.services-title {
-			font-size: 30px;
-			font-weight: bold;
-		}
 
-		.services-subtitle {
-			margin-top: 8px;
-			font-size: 14px;
-			font-weight: 300;
-		}
         .about-content {
         max-width: 420px;
     }
@@ -155,16 +166,7 @@
 	/* desktop menu */
 
 	@media all and (min-width: 768px) {
-		.services-title {
-			font-size: 30px;
-			font-weight: bold;
-		}
 
-		.services-subtitle {
-			margin-top: 8px;
-			font-size: 14px;
-			font-weight: 300;
-		}
 
         .about-content {
         max-width: 720px;

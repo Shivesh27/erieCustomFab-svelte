@@ -1,14 +1,24 @@
+<script>
+  import { base } from "$app/paths";
+</script>
+
 <footer class="footer">
     <div class="footer__addr">
       <h1 class="footer__logo">Erie Custom Fab Inc</h1>
 
-      <h2>Contact</h2>
+      <!-- <h2>Contact</h2> -->
 
       <address>
-        6 Iroquois Rd. Leamington, ON N8H 3V7 CANADA
+        6 Iroquois Rd.
+        <br/> 
+        Leamington, 
+        <br/>
+        ON N8H 3V7<br/>
+        Canada
         <br />
+        Ph.No: 519-326-9830
 
-        <a class="footer__btn" href="mailto:rfq@ERIECUSTOMFAB.COM"
+        <a class="footer__btn" href="mailto:surendral@eriecustomfab.com"
           >Email Us</a
         >
       </address>
@@ -20,18 +30,18 @@
 
         <ul class="nav__ul">
           <li>
-            <a href="index.html">Home</a>
+            <a href="{base}/">Home</a>
           </li>
 
           <li>
-            <a href="about.html">About us</a>
+            <a href="{base}/about">About us</a>
           </li>
 
           <li>
-            <a href="gallery.html">Gallery</a>
+            <a href="{base}/gallery">Gallery</a>
           </li>
           <li>
-            <a href="services.html">Services</a>
+            <a href="{base}/services">Services</a>
           </li>
         </ul>
       </li>
