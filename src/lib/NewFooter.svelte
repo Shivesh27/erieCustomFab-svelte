@@ -1,3 +1,7 @@
+<script>
+    import { base } from "$app/paths";
+  </script>
+
 <footer class="footer">
     <div class="footer-container">
         <div class="logo-container">
@@ -8,10 +12,10 @@
         </div>
         <div class="nav-links-container">
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Gallery</li>
+                <li><a href="{base}/">Home</a></li>
+                <li><a href="{base}/about">About</a></li>
+                <li><a href="{base}/services">Services</a></li>
+                <li><a href="{base}/gallery">Gallery</a></li>
             </ul>
         </div>
         <div class="contact-us-container">
@@ -28,6 +32,7 @@
         background-color: rgb(80, 104, 157);
         color: #fafafa;
     }
+
     .footer-container {
         display: flex;
         justify-content: space-around;
@@ -51,9 +56,24 @@
         display: flex;
         list-style: none;
     }
+    .nav-links-container a {
+      text-decoration: none;
+    }
     .nav-links-container li {
         padding: 20px;
         font-size: 20px;
+    }
+    li, a {
+      text-decoration: none;
+      color: white;
+    }
+
+    a {
+        transition: all 0.3s ease 0s;
+    }
+
+    a:hover {
+        color: #0088a9;
     }
 
     .contact-us-container {

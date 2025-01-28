@@ -19,7 +19,7 @@
     // .then(response => response.json())
     // .then(data => {images = data.images}) )
 
-	onMount(() => fetch('/images/')
+	onMount(() => fetch('/gallery-img/')
     .then(response => response.text())
 	.then(text => {
 		const parser = new DOMParser();
