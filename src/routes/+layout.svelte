@@ -16,4 +16,12 @@
     :global(.hero-container) {
         width: 100%; 
     }
+    :global(body) {
+        font-family: "Montserrat", sans-serif;
+    }
+    :global(*) {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 </style>

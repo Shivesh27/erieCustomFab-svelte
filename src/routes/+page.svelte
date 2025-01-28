@@ -81,24 +81,24 @@
         margin-bottom: 20px;
     }
 	.services-heading {
-		margin-top: 20px;
-		padding: 30px;
+		margin-top: 10px;
+		padding: 20px;
 		align-items: center;
 		text-align: center;
-        width: 60%;
+        width: 80%;
         border-radius: 5px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 	}
 
 	.services-title {
-		font-size: 30px;
+		font-size: 16px;
 		font-weight: 500;
-        padding-bottom: 40px;
+        padding-bottom: 10px;
 	}
 
 	.services-subtitle {
-		margin-top: 8px;
-		font-size: 16px;
+		margin-top: 10px;
+		font-size: 12px;
 		font-weight: 300;
 	}
 
@@ -161,6 +161,26 @@
         .about-content {
         max-width: 420px;
     }
+    .services-title {
+		font-size: 30px;
+		font-weight: 500;
+        padding-bottom: 40px;
+	}
+
+	.services-subtitle {
+		margin-top: 8px;
+		font-size: 16px;
+		font-weight: 300;
+	}
+    .services-heading {
+		margin-top: 20px;
+		padding: 30px;
+		align-items: center;
+		text-align: center;
+        width: 60%;
+        border-radius: 5px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	}
 	}
 
 	/* desktop menu */
@@ -171,5 +191,25 @@
         .about-content {
         max-width: 720px;
     }
+    .services-title {
+		font-size: 30px;
+		font-weight: 500;
+        padding-bottom: 40px;
+	}
+
+	.services-subtitle {
+		margin-top: 8px;
+		font-size: 16px;
+		font-weight: 300;
+	}
+    .services-heading {
+		margin-top: 20px;
+		padding: 30px;
+		align-items: center;
+		text-align: center;
+        width: 60%;
+        border-radius: 5px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	}
 	}
 </style>
